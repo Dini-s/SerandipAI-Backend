@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     contactNo: {
-        typr: String,
+        type: String,
         required: true,
     },
     Gender: {
@@ -30,7 +30,8 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     profileImgUrl: {
-        type: String
+        url: String,
+        public_id: String
     },
     createAt: {
         type: Date,
@@ -38,7 +39,7 @@ const userSchema = new mongoose.Schema({
     },
     updateAt: {
         type: Date,
-        required: Date.now
+        default: Date.now
     }
 });
 
